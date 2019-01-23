@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="git.lxy.com.wananzhuoapp">
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".main.MainActivity" />
+        <activity android:name=".ui.web.WebActivity" />
+        <activity android:name=".ui.tree.activity.TreeChildActivity" />
+        <activity android:name=".ui.my.activity.LoginActivity" />
+        <activity android:name=".ui.my.activity.MyCollectActivity" />
+        <activity android:name=".ui.flutter.FlutterSearchActivity">
+            <!--防止跳转到flutter页面黑屏-->
+            <meta-data
+                android:name="io.flutter.app.android.SplashScreenUntilFirstFrame"
+                android:value="true" />
+        </activity>
+    </application>
+
+</manifest>

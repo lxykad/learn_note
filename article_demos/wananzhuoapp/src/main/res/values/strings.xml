@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">wananzhuoapp</string>
+    <string name="scroll_down_behavior">git.lxy.com.wananzhuoapp.widget.behavior.BehaviorScrollDownShow</string>
+    <string name="space">&#160;</string>
+</resources>

@@ -1,0 +1,82 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "isRelease", "true"
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "isRelease", "false"
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api rootProject.ext.dependencies.appcompatV7
+    api rootProject.ext.dependencies.v4
+    api rootProject.ext.dependencies.constrant
+    api rootProject.ext.dependencies.design
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    api rootProject.ext.dependencies.arouter
+    annotationProcessor rootProject.ext.dependencies.arouterCompile
+    api rootProject.ext.dependencies.flyTablayout
+    api rootProject.ext.dependencies.eventbus
+    api rootProject.ext.dependencies.annotation
+    api rootProject.ext.dependencies.rxbinding
+    api rootProject.ext.dependencies.rxpermission
+    api rootProject.ext.dependencies.retrofit
+    api rootProject.ext.dependencies.retrofitAdapter
+    api rootProject.ext.dependencies.retrofitConverter
+   // api rootProject.ext.dependencies.rxkotlin
+    api rootProject.ext.dependencies.httplog
+    api rootProject.ext.dependencies.viewmodel
+    api rootProject.ext.dependencies.baseAdapter
+    api rootProject.ext.dependencies.paging
+    api rootProject.ext.dependencies.webAgent
+    api rootProject.ext.dependencies.stetho
+    api rootProject.ext.dependencies.stethoOkhttp
+    api rootProject.ext.dependencies.cookie
+    api rootProject.ext.dependencies.coroutines
+    api rootProject.ext.dependencies.flexbox
+    api rootProject.ext.dependencies.util
+    api rootProject.ext.dependencies.glide
+    annotationProcessor rootProject.ext.dependencies.glideCompiler
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    // flutter
+    api project(':flutter')
+}

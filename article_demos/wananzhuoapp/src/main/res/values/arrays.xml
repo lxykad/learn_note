@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="wanandroid_home_tab">
+        <item>主页</item>
+        <item>体系</item>
+        <item>导航</item>
+        <item>公众号</item>
+        <item>我的</item>
+    </string-array>
+
+</resources>

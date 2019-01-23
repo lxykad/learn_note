@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            tools:context=".ui.RxActivity">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp" />
+
+            <Button
+                android:id="@+id/bt_click"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="防多次点击" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="15dp" />
+
+                <TextView
+                    android:id="@+id/tv_cb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="00000" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_cutdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="clickTimer"
+                android:text="timer" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="name" />
+
+            <EditText
+                android:id="@+id/et_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="age" />
+
+            <Button
+                android:id="@+id/bt_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="登录" />
+
+            <Button
+                android:id="@+id/bt_interval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clickIntervar"
+                android:text="周期操作" />
+
+            <Button
+                android:id="@+id/bt_network"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clickHttp"
+                android:text="轮询" />
+
+            <Button
+                android:id="@+id/bt_repeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clickRepeat"
+                android:text="条件轮询" />
+
+            <Button
+                android:id="@+id/bt_retry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clickRetry"
+                android:text="网络重试" />
+
+            <Button
+                android:id="@+id/bt_request"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clickRequest"
+                android:text="网络请求嵌套" />
+
+            <Button
+                android:id="@+id/bt_flow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clickFlow"
+                android:text="背压" />
+
+            <Button
+                android:id="@+id/bt_permission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clickPermission"
+                android:text="动态权限" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</layout>

@@ -1,0 +1,7 @@
+include ':app', ':commonlibrary', ':androidmodule', ':vuemodule', ':kotlinmodule', ':javamodule', ':processlib', ':wananzhuoapp'
+
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+        settingsDir.parentFile,
+        'wananzhuoapp_flutter/.android/include_flutter.groovy'
+))

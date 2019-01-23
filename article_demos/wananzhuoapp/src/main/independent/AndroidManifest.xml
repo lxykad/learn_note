@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.article.demos.android">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application android:theme="@style/AppTheme">
+        <activity android:name="git.lxy.com.wananzhuoapp.main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="git.lxy.com.wananzhuoapp.ui.web.WebActivity" />
+        <activity android:name="git.lxy.com.wananzhuoapp.ui.tree.activity.TreeChildActivity" />
+        <activity android:name="git.lxy.com.wananzhuoapp.ui.my.activity.LoginActivity"/>
+        <activity android:name="git.lxy.com.wananzhuoapp.ui.my.activity.MyCollectActivity"/>
+    </application>
+
+</manifest>
