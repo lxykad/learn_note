@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 
+import git.lxy.com.wananzhuoapp.ui.web.WebActivity;
 import io.flutter.app.FlutterActivity;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
@@ -46,11 +47,12 @@ public class FlutterSearchActivity extends FlutterActivity {
 
                         } else if (call.method.equals("getTime")) {
                             result.success(getCurrentTime());
-                        } else if (call.method.equals("jump")){
-                              String url = call.argument("url").toString();
+                        } else if (call.method.equals("jump")) {
+                            String url = call.argument("url").toString();
+                            System.out.println("url=======" + url);
+                            WebActivity.Companion.openActivity(FlutterSearchActivity.this,url);
 
-
-                        }else {
+                        } else {
 
                         }
                     }
